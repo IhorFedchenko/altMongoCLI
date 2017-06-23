@@ -1,0 +1,10 @@
+{"_id":{"$oid":"594989c638773060134b8442"},"rank":10.0,"brand":"Dodge","model":"Viper","engineSpec":{"cylinderConfig":"V-10","engineLiters":8.4,"transmission":"6 speed manual"}}
+{"_id":{"$oid":"59498a0238773060134b8443"},"rank":9.0,"brand":"Aston Martin","model":"DB11","engineSpec":{"cylinderConfig":"V-12","engineLiters":5.2,"transmission":"8 speed auto"}}
+{"_id":{"$oid":"59498a2d38773060134b8444"},"rank":8.0,"brand":"Porsche","model":"718 Cayman S","engineSpec":{"cylinderConfig":"H-4","engineLiters":2.0,"transmission":"7 speed auto"}}
+{"_id":{"$oid":"59498a7638773060134b8445"},"rank":7.0,"brand":"Ford","model":"Shelby GT 350","engineSpec":{"cylinderConfig":"V-8","engineLiters":5.2,"transmission":"6 speed manual"}}
+{"_id":{"$oid":"59498aa038773060134b8446"},"rank":6.0,"brand":"Chevrolet","model":"Corvette","engineSpec":{"cylinderConfig":"V-8","engineLiters":6.2,"transmission":"7 speed manual"}}
+{"_id":{"$oid":"59498ae738773060134b8447"},"rank":5.0,"brand":"Nissan","model":"GT-R","engineSpec":{"cylinderConfig":"V-6","engineLiters":3.8,"transmission":"6 speed auto"}}
+{"_id":{"$oid":"59498b1838773060134b8448"},"rank":4.0,"brand":"Audi","model":"R8 plus quattro Coupe","engineSpec":{"cylinderConfig":"V-10","engineLiters":5.2,"transmission":"7 speed auto"}}
+{"_id":{"$oid":"59498b4038773060134b8449"},"rank":3.0,"brand":"Acura","model":"NSX","engineSpec":{"cylinderConfig":"V-6","engineLiters":3.5,"transmission":"9 speed auto"}}
+{"_id":{"$oid":"59498b7138773060134b844a"},"rank":2.0,"brand":"Mazda","model":"MX-5 Miata Grand Touring","engineSpec":{"cylinderConfig":"I-4","engineLiters":2.0,"transmission":"6 speed manual"}}
+{"_id":{"$oid":"59498bac38773060134b844b"},"rank":1.0,"brand":"Alfa Romeo","model":"4C Base","engineSpec":{"cylinderConfig":"I-4","engineLiters":1.7,"transmission":"6 speed manual"}}

@@ -1,0 +1,10 @@
+{"_id":{"$oid":"5949834be916d79e033500c6"},"rank":10.0,"brand":"Toyota","model":"86SE","engineSpec":{"cylinderConfig":"H-4","engineLiters":2.0,"transmission":"6 speed auto"}}
+{"_id":{"$oid":"5949840de916d79e033500c7"},"rank":9.0,"brand":"Dodge","model":"Challenger SRT 392 RWD","engineSpec":{"cylinderConfig":"V-8","engineLiters":6.4,"transmission":"6 speed manual"}}
+{"_id":{"$oid":"59498462e916d79e033500c8"},"rank":8.0,"brand":"MINI","model":"Hardtop","engineSpec":{"cylinderConfig":"I-3","engineLiters":1.5,"transmission":"6 speed manual"}}
+{"_id":{"$oid":"594984a1e916d79e033500c9"},"rank":7.0,"brand":"AUDI","model":"TT quatro Coupe","engineSpec":{"cylinderConfig":"I-4","engineLiters":2.0,"transmission":"6 speed auto"}}
+{"_id":{"$oid":"594984dbe916d79e033500ca"},"rank":6.0,"brand":"FORD","model":"Mustang GT Fastback","engineSpec":{"cylinderConfig":"v-6","engineLiters":3.7,"transmission":"6 speed manual"}}
+{"_id":{"$oid":"59498597e916d79e033500cb"},"rank":5.0,"brand":"FIAT","model":"500 Abarth","engineSpec":{"cylinderConfig":"I-4","engineLiters":1.4,"transmission":"5 speed manual"}}
+{"_id":{"$oid":"594985dce916d79e033500cc"},"rank":4.0,"brand":"Infiniti","model":"Q60 2.0t RWD","engineSpec":{"cylinderConfig":"I-4","engineLiters":2.0,"transmission":"7 speed auto"}}
+{"_id":{"$oid":"59498617e916d79e033500cd"},"rank":3.0,"brand":"Chevrolet","model":"Camaro 1SS Coupe","engineSpec":{"cylinderConfig":"I-4","engineLiters":3.6,"transmission":"8 speed auto"}}
+{"_id":{"$oid":"59498653e916d79e033500ce"},"rank":2.0,"brand":"Honda","model":"Civic Touring Coupe","engineSpec":{"cylinderConfig":"I-4","engineLiters":1.5,"transmission":"6 speed auto"}}
+{"_id":{"$oid":"59498677e916d79e033500cf"},"rank":1.0,"brand":"Nissan","model":"GT-R","engineSpec":{"cylinderConfig":"V-6","engineLiters":3.8,"transmission":"6 speed auto"}}

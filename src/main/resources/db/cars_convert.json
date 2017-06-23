@@ -1,0 +1,10 @@
+{"_id":{"$oid":"594986fae916d79e033500d0"},"rank":10.0,"brand":"Jaguar","model":"F-TYPE","engineSpec":{"cylinderConfig":"V-6","engineLiters":3.0,"transmission":"6 speed manual"}}
+{"_id":{"$oid":"59498738e916d79e033500d1"},"rank":9.0,"brand":"BMW","model":"230","engineSpec":{"cylinderConfig":"I-4","engineLiters":2.0,"transmission":"8 speed auto"}}
+{"_id":{"$oid":"594987fd38773060134b843a"},"rank":8.0,"brand":"Porsche","model":"718 Boxster","engineSpec":{"cylinderConfig":"H-4","engineLiters":2.0,"transmission":"6 speed manual"}}
+{"_id":{"$oid":"5949882f38773060134b843b"},"rank":7.0,"brand":"Chevrolet","model":"Corvette","engineSpec":{"cylinderConfig":"V-8","engineLiters":6.2,"transmission":"8 speed auto"}}
+{"_id":{"$oid":"5949885938773060134b843c"},"rank":6.0,"brand":"FIAT","model":"500c Abarth","engineSpec":{"cylinderConfig":"I-4","engineLiters":1.4,"transmission":"6 speed auto"}}
+{"_id":{"$oid":"5949888d38773060134b843d"},"rank":5.0,"brand":"Alfa Romeo","model":"4C Spider","engineSpec":{"cylinderConfig":"I-4","engineLiters":1.7,"transmission":"6 speed auto"}}
+{"_id":{"$oid":"594988b638773060134b843e"},"rank":4.0,"brand":"Chevrolet","model":"Camaro","engineSpec":{"cylinderConfig":"I-4","engineLiters":3.6,"transmission":"8 speed auto"}}
+{"_id":{"$oid":"594988d538773060134b843f"},"rank":3.0,"brand":"Audi","model":"TT","engineSpec":{"cylinderConfig":"I-4","engineLiters":2.0,"transmission":"6 speed auto"}}
+{"_id":{"$oid":"594988f838773060134b8440"},"rank":2.0,"brand":"Ford","model":"Mustang","engineSpec":{"cylinderConfig":"V-6","engineLiters":3.7,"transmission":"6 speed manual"}}
+{"_id":{"$oid":"5949894338773060134b8441"},"rank":1.0,"brand":"Mazda","model":"MX-5 Miata RF Launch Edition","engineSpec":{"cylinderConfig":"I-4","engineLiters":2.0,"transmission":"6 speed manual"}}
