@@ -30,7 +30,7 @@ public class Main {
 
             //(SELECT * FROM table)
             System.out.println("=======");
-            System.out.println("find all entities to collection");
+            System.out.println("find all entities from collection");
             System.out.println("=======");
             collection.find().forEach((Block<Document>) exemple01 -> {
                 System.out.println(exemple01.toJson());
