@@ -72,5 +72,22 @@ public class Main {
         collection.find(Filters.ne("rank", 5)).forEach((Block<Document>) exemple07 -> {
             System.out.println(exemple07.toJson());
         });
+
+        //SElECT * FROM table WHERE <condition> and <condition>
+        System.out.println();
+        System.out.println("***exemple08***");
+        collection.find(Filters.and(Filters.gte("rank", 3), Filters.lte("rank", 7)))
+                .forEach((Block<Document>) exemple08 -> {
+                    System.out.println(exemple08.toJson());
+                });
+
+        //SELECT * FROM table WHERE <condition> or <condition>
+        System.out.println();
+        System.out.println("***exemple09***");
+        collection.find(Filters.or(Filters.eq("rank", 3), Filters.eq("rank", 7)))
+                .forEach((Block<Document>) ememple09 -> {
+                    System.out.println(ememple09.toJson());
+                });
+
     }
 }
