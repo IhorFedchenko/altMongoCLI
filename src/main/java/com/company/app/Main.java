@@ -78,8 +78,8 @@ public class Main {
         System.out.println();
         System.out.println("***example08***");
         collection.find(Filters.and(Filters.gte("rank", 3), Filters.lte("rank", 7)))
-                .forEach((Block<Document>) exemple08 -> {
-                    System.out.println(exemple08.toJson());
+                .forEach((Block<Document>) example08 -> {
+                    System.out.println(example08.toJson());
                 });
 
         //SELECT * FROM table WHERE <condition> or <condition>
@@ -97,11 +97,18 @@ public class Main {
             System.out.println(example10.toJson());
         });
 
-        //SELECT field.*
+        //SELECT field.* FROM table
         System.out.println();
         System.out.println("***example11***");
         collection.find().projection(Projections.include("engineSpec")).forEach((Block<Document>) example11 ->{
             System.out.println(example11.toJson());
+        });
+
+        //SELECT field.subfield FROM table
+        System.out.println();
+        System.out.println("***example12***");
+        collection.find().projection((Projections.include("engineSpec.transmission"))).forEach((Block<Document>) example12 ->{
+            System.out.println(example12.toJson());
         });
     }
 }
