@@ -1,52 +1,47 @@
 package com.company.app;
 
-import com.mongodb.Block;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
+import com.mongodb.*;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Projections;
 import org.bson.Document;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * Created by fedchenko on 22.06.17.
  */
 public class Main {
 
+    static String host = "localhost";
+    static int port = 27017;
+    static String database = "test";
 
-
-    static String uriDb = "mongodb://127.0.0.1:27017";
-
-    static String dbName = "test";
-
-    public static void setUriDb(String uriDb) {
-        Main.uriDb = uriDb;
+    public static void setDatabase(String database) {
+        Main.database = database;
     }
 
-    public static void setDbName(String dbName) {
-        Main.dbName = dbName;
+    public static void setHost(String host) {
+        Main.host = host;
+    }
+
+    public static void setPort(int port) {
+        Main.port = port;
     }
 
     public static void main(String[] args) {
-        if (args.length == 1){
-            setUriDb(args[0]);
+        if (args.length == 2 && args[0].equals("--db")){
+            setDatabase(args[1]);
         }
-        if (args.length == 2){
-            setUriDb(args[0]);
-            setDbName(args[1]);
-        }
-
-
-        MongoClientURI uri = new MongoClientURI(uriDb);
 
 
         MongoClient mongoClient = null;
-
-        mongoClient = new MongoClient(uri);
+        mongoClient = new MongoClient(host,port);
 
         // Get database
-        MongoDatabase database = mongoClient.getDatabase(dbName);
+        MongoDatabase database = mongoClient.getDatabase(Main.database);
 
         // Get collection
         MongoCollection<Document> collection = database.getCollection("sport");
@@ -142,4 +137,5 @@ public class Main {
             System.out.println(example01.toJson());
         });
     }
+    //TODO for(type iter : collect){for(type iter : collect){...set keys}
 }
