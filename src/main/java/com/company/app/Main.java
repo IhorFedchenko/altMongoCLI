@@ -13,16 +13,40 @@ import org.bson.Document;
  * Created by fedchenko on 22.06.17.
  */
 public class Main {
-    public static void main(String[] args) {
 
-        MongoClientURI uri = new MongoClientURI("mongodb://127.0.0.1:27017");
+
+
+    static String uriDb = "mongodb://127.0.0.1:27017";
+
+    static String dbName = "test";
+
+    public static void setUriDb(String uriDb) {
+        Main.uriDb = uriDb;
+    }
+
+    public static void setDbName(String dbName) {
+        Main.dbName = dbName;
+    }
+
+    public static void main(String[] args) {
+        if (args.length == 1){
+            setUriDb(args[0]);
+        }
+        if (args.length == 2){
+            setUriDb(args[0]);
+            setDbName(args[1]);
+        }
+
+
+        MongoClientURI uri = new MongoClientURI(uriDb);
+
 
         MongoClient mongoClient = null;
 
         mongoClient = new MongoClient(uri);
 
         // Get database
-        MongoDatabase database = mongoClient.getDatabase("cars");
+        MongoDatabase database = mongoClient.getDatabase(dbName);
 
         // Get collection
         MongoCollection<Document> collection = database.getCollection("sport");
@@ -114,7 +138,7 @@ public class Main {
         //SELECT * FROM table SKIP value LIMIT value
         System.out.println();
         System.out.println("***example13***");
-        collection.find().skip(3).limit(3).forEach((Block<Document>) example01 -> {
+        collection.find().skip(0).limit(0).forEach((Block<Document>) example01 -> {
             System.out.println(example01.toJson());
         });
     }
