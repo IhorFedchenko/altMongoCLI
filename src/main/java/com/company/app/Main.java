@@ -27,7 +27,7 @@ public class Main {
         // Get collection
         MongoCollection<Document> collection = database.getCollection("sport");
 
-        //(SELECT * FROM table)
+        //SELECT * FROM table
         System.out.println("***example01***");
         collection.find().forEach((Block<Document>) example01 -> {
             System.out.println(example01.toJson());
@@ -109,6 +109,13 @@ public class Main {
         System.out.println("***example12***");
         collection.find().projection((Projections.include("engineSpec.transmission"))).forEach((Block<Document>) example12 ->{
             System.out.println(example12.toJson());
+        });
+
+        //SELECT * FROM table SKIP value LIMIT value
+        System.out.println();
+        System.out.println("***example13***");
+        collection.find().skip(3).limit(3).forEach((Block<Document>) example01 -> {
+            System.out.println(example01.toJson());
         });
     }
 }
