@@ -7,6 +7,9 @@ import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Projections;
 import org.bson.Document;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,6 +38,19 @@ public class Main {
 
         if (args.length >= 2 && args.length % 2 == 0) {
             insertKeyValue(args);
+        }
+
+
+
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+           String input = new String (reader.readLine());
+            while(!input.equals("exit")){
+                System.out.println("test input :"+ input);
+                input = new String(reader.readLine());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
 
