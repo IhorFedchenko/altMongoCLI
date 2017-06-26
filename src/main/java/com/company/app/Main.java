@@ -7,8 +7,8 @@ import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Projections;
 import org.bson.Document;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by fedchenko on 22.06.17.
@@ -32,13 +32,14 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        if (args.length == 2 && args[0].equals("--db")){
-            setDatabase(args[1]);
+
+        if (args.length >= 2 && args.length % 2 == 0) {
+            insertKeyValue(args);
         }
 
 
         MongoClient mongoClient = null;
-        mongoClient = new MongoClient(host,port);
+        mongoClient = new MongoClient(host, port);
 
         // Get database
         MongoDatabase database = mongoClient.getDatabase(Main.database);
@@ -112,21 +113,21 @@ public class Main {
         //SELECT fields FROM table
         System.out.println();
         System.out.println("***example10***");
-        collection.find().projection(Projections.include("brand","model")).forEach((Block<Document>) example10 ->{
+        collection.find().projection(Projections.include("brand", "model")).forEach((Block<Document>) example10 -> {
             System.out.println(example10.toJson());
         });
 
         //SELECT field.* FROM table
         System.out.println();
         System.out.println("***example11***");
-        collection.find().projection(Projections.include("engineSpec")).forEach((Block<Document>) example11 ->{
+        collection.find().projection(Projections.include("engineSpec")).forEach((Block<Document>) example11 -> {
             System.out.println(example11.toJson());
         });
 
         //SELECT field.subfield FROM table
         System.out.println();
         System.out.println("***example12***");
-        collection.find().projection((Projections.include("engineSpec.transmission"))).forEach((Block<Document>) example12 ->{
+        collection.find().projection((Projections.include("engineSpec.transmission"))).forEach((Block<Document>) example12 -> {
             System.out.println(example12.toJson());
         });
 
@@ -137,5 +138,24 @@ public class Main {
             System.out.println(example01.toJson());
         });
     }
-    //TODO for(type iter : collect){for(type iter : collect){...set keys}
+
+    public static void insertKeyValue(String[] input){
+        Map setup = new HashMap<String, String >();
+
+        for(int i = 0; i < input.length; i+=2){
+            if(input[i].substring(0,2).equals("--")){
+                setup.put(input[i], input[i+1]);
+            }
+        }
+
+        if(setup.containsKey("--db")){
+            setDatabase((String) setup.get("--db"));
+        }
+        if(setup.containsKey("--host")){
+            setHost((String) setup.get("--host"));
+        }
+        if(setup.containsKey("--port")){
+            setPort((Integer) setup.get("--port"));
+        }
+    }
 }
