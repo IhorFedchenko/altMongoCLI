@@ -134,8 +134,21 @@ public class Main {
         //SELECT * FROM table SKIP value LIMIT value
         System.out.println();
         System.out.println("***example13***");
-        collection.find().skip(0).limit(0).forEach((Block<Document>) example01 -> {
-            System.out.println(example01.toJson());
+        collection.find().skip(0).limit(0).forEach((Block<Document>) example13 -> {
+            System.out.println(example13.toJson());
+        });
+        // SELECT * FROM table ORDER fields ASC
+        System.out.println();
+        System.out.println("***example14***");
+        collection.find().sort(new BasicDBObject("rank", 1)).forEach((Block<Document>) example14 -> {
+            System.out.println(example14.toJson());
+        });
+
+        // SELECT * FROM table ORDER fields DESC
+        System.out.println();
+        System.out.println("***example15***");
+        collection.find().sort(new BasicDBObject("rank", -1)).forEach((Block<Document>) example15 -> {
+            System.out.println(example15.toJson());
         });
     }
 
